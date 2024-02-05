@@ -1,0 +1,39 @@
+What is Black?
+PEP-8 format checker
+
+To check if a file is PEP-8 compliant, simply
+use the command:
+
+echo $?
+
+True means that there is something that 
+needs to be reformatted and False means
+that there's nothing to reformat.
+
+Alternatively you can use the following
+command to achieve the same thing:
+
+black <filename> --check
+
+To automatically reformat your file, simply
+use the following command:
+
+black <filename>
+
+However, black doesn't to catch all issues.
+
+To be thorough, use flake8
+
+If you want to relax flake8 adherence
+to PEP8, you can create a file called:
+
+tox.ini
+
+In the file, you can include the error
+you want to be ignored:
+
+[flake8]
+extend-ignore = E501
+
+Note: this make it no longer PEP-8 
+compliant.
