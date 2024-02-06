@@ -5,6 +5,8 @@ import datetime as dt
 
 import pytest
 
+def test_overdue():
+    assert not app._overdue(None)
 
 def test_to_date():
     assert app._to_date("2022-09-01") == dt.date(2022, 9, 1)
